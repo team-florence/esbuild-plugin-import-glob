@@ -29,6 +29,7 @@
   "homepage": "https://github.com/thomaschaaf/esbuild-plugin-import-glob#readme",
   "devDependencies": {
     "@types/jest": "^26.0.20",
+    "@types/node": "^18.19.0",
     "esbuild": "^0.9.2",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
