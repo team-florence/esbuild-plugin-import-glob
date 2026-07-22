@@ -20,9 +20,10 @@ const EsbuildPluginImportGlob = (config) => ({
             };
         });
         build.onLoad({ filter: /.*/, namespace: 'import-glob' }, async (args) => {
-            const files = (await fast_glob_1.default(args.path, {
+            var _a;
+            const files = (await (0, fast_glob_1.default)(args.path, {
                 cwd: args.pluginData.resolveDir,
-                ignore: config.ignorePaths,
+                ignore: (_a = config === null || config === void 0 ? void 0 : config.ignorePaths) !== null && _a !== void 0 ? _a : [],
             })).sort();
             let importerCode = `
         ${files
